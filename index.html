@@ -234,7 +234,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="实验拓扑"><a href="#实验拓扑" class="headerlink" title="实验拓扑"></a>实验拓扑</h3><p><img src="./assets/1.png" alt="图1-1"></p>
+        <h3 id="实验拓扑"><a href="#实验拓扑" class="headerlink" title="实验拓扑"></a>实验拓扑</h3><p><img src="/.com//1.png" alt="图1-1"></p>
 <hr>
 <h3 id="实验需求"><a href="#实验需求" class="headerlink" title="实验需求"></a>实验需求</h3><ol>
 <li>配置IP地址，R1的g0/0口是<code>1.1.1.1/24</code>，R2的g0/0口是<code>1.1.1.2/24</code></li>
@@ -265,7 +265,7 @@ System View: return to User View with Ctrl+Z.
 [R2-GigabitEthernet0/0]ip address 1.1.1.2 24</code></pre></li>
 <li><p>开启抓包</p>
 <p> <em>步骤1：右键点击R1和R2相连的链路，点击<code>开启抓包</code>，如图1-2所示</em></p>
-<p> <img src="./assets/2.png" alt="图1-2"></p>
+<p> <img src="/.com//2.png" alt="图1-2"></p>
 </li>
 <li><p>在R1上PING R2</p>
 <pre><code>[R1]ping 1.1.1.2
@@ -277,11 +277,11 @@ Ping 1.1.1.2 (1.1.1.2): 56 data bytes, press CTRL_C to break
 56 bytes from 1.1.1.2: icmp_seq=4 ttl=255 time=1.000 ms</code></pre></li>
 <li><p>开启Wireshark，查看抓取的Ping包内容</p>
 <p> <em>步骤1：点开HCL右侧边栏，右键点击GE0/0接口，并点击启动Wireshark，如图1-3所示</em></p>
-<p> <img src="./assets/3.png" alt="图3"></p>
+<p> <img src="/.com//3.png" alt="图3"></p>
 <p> <em>步骤2：在Wireshark中可以看到抓到的数据包，紫色高亮的就是Ping包，如图1-4所示</em></p>
-<p> <img src="./assets/4.png" alt="图1-4"></p>
+<p> <img src="/.com//4.png" alt="图1-4"></p>
 <p> <em>步骤3：双击某个Ping包，查看数据包详细内容，展开Internet Protocol Version 4，可以查看到详细的IP头部格式，如图1-5所示</em></p>
-<p> <img src="./assets/5.png" alt="图1-5"></p>
+<p> <img src="/.com//5.png" alt="图1-5"></p>
 </li>
 <li><p>在R2上开启FTP服务，创建用户<code>wangdaye</code>，密码<code>123456</code></p>
 <pre><code>[R2]ftp server enable 
@@ -291,7 +291,7 @@ New local user added.
 [R2-luser-manage-wangdaye]authorization-attribute user-role level-15
 [R2-luser-manage-wangdaye]service-type ftp</code></pre></li>
 <li><p>在R1上访问FTP服务，输入用户名和密码</p>
-<p> <span style="color:red;font-size:150%;" > <em>注意：FTP登录功能只能在用户视图下使用</em></span></p>
+<p> <span style="color:red;font-size:150%;"> <em>注意：FTP登录功能只能在用户视图下使用</em></span></p>
 <pre><code>&lt;R1&gt;ftp 1.1.1.2
 Press CTRL+C to abort.
 Connected to 1.1.1.2 (1.1.1.2).
@@ -303,7 +303,7 @@ Password:
 Remote system type is UNIX.
 Using binary mode to transfer files.</code></pre></li>
 <li><p>刷新Wireshark，发现已经抓取到FTP的登录名和密码，如图1-6所示</p>
-<p> <img src="./assets/6.png" alt="图1-6"></p>
+<p> <img src="/.com//6.png" alt="图1-6"></p>
 </li>
 </ol>
 
