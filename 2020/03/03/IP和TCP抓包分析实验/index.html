@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>IP和TCP抓包分析实验 - 猪猪睿超可爱</title>
+    <title>IP和TCP抓包分析实验 - QYY的个人博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
@@ -17,8 +17,8 @@
 在该链路上开启抓包
 在R1上ping R2
 开启wireshark，查看抓取的pi,"> 
-    <meta name="author" content="猪猪睿超可爱"> 
-    <link rel="alternative" href="atom.xml" title="猪猪睿超可爱" type="application/atom+xml"> 
+    <meta name="author" content="QYY的个人博客"> 
+    <link rel="alternative" href="atom.xml" title="QYY的个人博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
@@ -39,12 +39,12 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body class="loading">
-    <span id="config-title" style="display:none">猪猪睿超可爱</span>
+    <span id="config-title" style="display:none">QYY的个人博客</span>
     <div id="loader"></div>
     <div id="single">
     <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
-    <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <a class="icon-home image-icon" href="javascript:;" data-url="greatbvv.github.io"></a>
     <div title="播放/暂停" class="icon-play"></div>
     <h3 class="subtitle">IP和TCP抓包分析实验</h3>
     <div class="social">
@@ -68,10 +68,12 @@
         <div class="stuff">
             <span>三月 03, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/HCL%E6%A8%A1%E6%8B%9F%E5%99%A8/" rel="tag">HCL模拟器</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/TCP-IP%E5%8D%8F%E8%AE%AE/" rel="tag">TCP/IP协议</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            <h3 id="实验拓扑"><a href="#实验拓扑" class="headerlink" title="实验拓扑"></a>实验拓扑</h3><p><img src="/2020/03/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/1.png" alt="图1-1"></p>
+            <h3 id="实验拓扑"><a href="#实验拓扑" class="headerlink" title="实验拓扑"></a>实验拓扑</h3><p><img src="/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/1.png" alt="图1-1"></p>
 <hr>
 <h3 id="实验需求"><a href="#实验需求" class="headerlink" title="实验需求"></a>实验需求</h3><ol>
 <li>配置IP地址，R1的g0/0口是<code>1.1.1.1/24</code>，R2的g0/0口是<code>1.1.1.2/24</code></li>
@@ -104,18 +106,18 @@
 </li>
 <li><p>开启抓包</p>
 <p> <em>步骤1：右键点击R1和R2相连的链路，点击<code>开启抓包</code>，如图1-2所示</em></p>
-<p> <img src="/2020/03/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/2.png" alt="图1-2"></p>
+<p> <img src="/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/2.png" alt="图1-2"></p>
 </li>
 <li><p>在R1上PING R2</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[R1]ping 1.1.1.2</span><br><span class="line">Ping 1.1.1.2 (1.1.1.2): 56 data bytes, press CTRL_C to break</span><br><span class="line">56 bytes from 1.1.1.2: icmp_seq&#x3D;0 ttl&#x3D;255 time&#x3D;1.000 ms</span><br><span class="line">56 bytes from 1.1.1.2: icmp_seq&#x3D;1 ttl&#x3D;255 time&#x3D;1.000 ms</span><br><span class="line">56 bytes from 1.1.1.2: icmp_seq&#x3D;2 ttl&#x3D;255 time&#x3D;0.000 ms</span><br><span class="line">56 bytes from 1.1.1.2: icmp_seq&#x3D;3 ttl&#x3D;255 time&#x3D;1.000 ms</span><br><span class="line">56 bytes from 1.1.1.2: icmp_seq&#x3D;4 ttl&#x3D;255 time&#x3D;1.000 ms</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>开启Wireshark，查看抓取的Ping包内容</p>
 <p> <em>步骤1：点开HCL右侧边栏，右键点击GE0/0接口，并点击<code>启动Wireshark</code>，如图1-3所示</em></p>
-<p> <img src="/2020/03/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/3.png" alt="图3"></p>
+<p> <img src="/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/3.png" alt="图3"></p>
 <p> <em>步骤2：在Wireshark中可以看到抓到的数据包，紫色高亮的就是Ping包，如图1-4所示</em></p>
-<p> <img src="/2020/03/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/4.png" alt="图1-4"></p>
+<p> <img src="/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/4.png" alt="图1-4"></p>
 <p> <em>步骤3：双击某个Ping包，查看数据包详细内容，展开<code>Internet Protocol Version 4</code>，可以查看到详细的IP头部格式，如图1-5所示</em></p>
-<p> <img src="/2020/03/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/5.png" alt="图1-5"></p>
+<p> <img src="/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/5.png" alt="图1-5"></p>
 </li>
 <li><p>在R2上开启FTP服务，创建用户<code>root</code>，密码<code>root</code></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[R2]ftp server enable </span><br><span class="line">[R2]local-user root class manage </span><br><span class="line">New local user added.</span><br><span class="line">[R2-luser-manage-root]password simple root</span><br><span class="line">[R2-luser-manage-root]authorization-attribute user-role level-15</span><br><span class="line">[R2-luser-manage-root]service-type ftp</span><br></pre></td></tr></table></figure>
@@ -125,7 +127,7 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;R1&gt;ftp 1.1.1.2</span><br><span class="line">Press CTRL+C to abort.</span><br><span class="line">Connected to 1.1.1.2 (1.1.1.2).</span><br><span class="line">220 FTP service ready.</span><br><span class="line">User (1.1.1.2:(none)): root</span><br><span class="line">331 Password required for root.</span><br><span class="line">Password: </span><br><span class="line">230 User logged in.</span><br><span class="line">Remote system type is UNIX.</span><br><span class="line">Using binary mode to transfer files.</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>刷新Wireshark，发现已经抓取到FTP的登录名和密码，如图1-6所示</p>
-<p> <img src="/2020/03/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/6.png" alt="图1-6"></p>
+<p> <img src="/03/IP%E5%92%8CTCP%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/6.png" alt="图1-6"></p>
 </li>
 </ol>
 
@@ -160,6 +162,10 @@
 
 
     </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#实验拓扑"><span class="toc-number">1.</span> <span class="toc-text">实验拓扑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验需求"><span class="toc-number">2.</span> <span class="toc-text">实验需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验解法"><span class="toc-number">3.</span> <span class="toc-text">实验解法</span></a></li></ol>
+        </div>
     
 </div>
 
